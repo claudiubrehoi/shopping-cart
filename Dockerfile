@@ -4,7 +4,7 @@ COPY Dockerfile /tmp/
 COPY src /tmp/src/
 WORKDIR /tmp/
 RUN mvn install
-COPY /tmp/target/shopping-cart-0.0.1.jar shopping-cart-0.0.1.jar
+COPY /root/.m2/repository/rocla/shopping-cart/0.0.1/shopping-cart-0.0.1.jar /tmp/shopping-cart-0.0.1.jar
 VOLUME /tmp
 
 FROM alpine:3.10
