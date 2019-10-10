@@ -5,7 +5,7 @@ COPY src /tmp/src/
 WORKDIR /tmp/
 RUN mvn install
 
-FROM alpine:3.8
+FROM alpine:3.10
 RUN apk --no-cache add openjdk11
 VOLUME /tmp
 COPY target/shopping-cart-0.0.1.jar shopping-cart-0.0.1.jar
