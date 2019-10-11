@@ -6,7 +6,7 @@ COPY Dockerfile /tmp/
 COPY src /tmp/src/
 WORKDIR /tmp/
 RUN mvn install
-VOLUME /tmp
-COPY target/shopping-cart-0.0.1.jar shopping-cart-0.0.1.jar
 EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "", "/shopping-cart-0.0.1.jar"]
+
+VOLUME /tmp
