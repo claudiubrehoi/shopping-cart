@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: claudiubrehoishoppingcart 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: claudiubrehoishoppingcart 
+    spec:
+      containers:
+        - name: claudiubrehoishoppingcart 
+          image: estore.azurecr.io/claudiubrehoishoppingcart 
+          ports:
+          - containerPort: 8080
