@@ -12,7 +12,7 @@ variables:
 
   # Container registry service connection established during pipeline creation
   dockerRegistryServiceConnection: '7998c429-8926-420d-b171-1876a1b4a586'
-  imageRepository: 'claudiubrehoi/shoppingcart'
+  imageRepository: 'claudiubrehoishoppingcart'
   containerRegistry: 'estore.azurecr.io'
   dockerfilePath: '**/Dockerfile'
   tag: '$(Build.BuildId)'
@@ -51,7 +51,7 @@ stages:
     displayName: Deploy
     pool:
       vmImage: $(vmImageName)
-    environment: 'claudiubrehoi/shoppingcart.kube-public'
+    environment: 'claudiubrehoishoppingcart.kube-public'
     strategy:
       runOnce:
         deploy:
